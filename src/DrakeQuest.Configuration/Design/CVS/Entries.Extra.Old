@@ -1,0 +1,12 @@
+/ApplicationElementCollectionConverter.cs////
+/ApplicationElementPropertyDescriptor.cs////
+/ApplicationSettingElementCollectionConverter.cs////
+/ApplicationSettingElementPropertyDescriptor.cs////
+/ConnectionStringElementCollectionConverter.cs////
+/ConnectionStringElementPropertyDescriptor.cs////
+/EnvironmentElementCollectionConverter.cs////
+/EnvironmentElementPropertyDescriptor.cs////
+/SettingElementCollectionConverter.cs////
+/SettingElementPropertyDescriptor.cs////
+/UrlElementCollectionConverter.cs////
+/UrlElementPropertyDescriptor.cs////

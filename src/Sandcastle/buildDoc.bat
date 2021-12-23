@@ -1,0 +1,1 @@
+"%ProgramFiles(x86)%\MSBuild\14.0\bin\MSBuild.exe" DrakeQuest.shfbproj^ /p:Configuration=Release

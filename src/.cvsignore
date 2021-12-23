@@ -1,0 +1,8 @@
+bin
+obj
+temp
+*.csproj.user
+.vs
+packages
+build
+local_packages

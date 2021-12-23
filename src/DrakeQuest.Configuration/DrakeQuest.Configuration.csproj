@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<!--<PropertyGroup Condition="'$(TargetFramework)' != 'netcoreapp3.1'">
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);GetMyPackageFiles</TargetsForTfmSpecificBuildOutput>
+	</PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+		<GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+	</PropertyGroup>-->
+	<ItemGroup Condition="'$(TargetFramework.StartsWith(`net4`))'">
+		<Reference Include="System.Configuration" />
+		<PackageReference Include="IBM.Data.DB2" Version="10.0.5.5" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'!$(TargetFramework.StartsWith(`net4`))'">
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+		<PackageReference Include="IBM.Data.DB2.Core" Version="3.1.0.300" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>PublicResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+	
+	<!--<Target Condition="'$(TargetFramework)' != 'netcoreapp3.1'" Name="PostAfterBuild" AfterTargets="Build" Inputs="$(MSBuildAllProjects);@(IntermediateAssembly)" Outputs="$(OutputPath)$(_SGenDllName)">
+		<SGen BuildAssemblyName="$(TargetFileName)" BuildAssemblyPath="$(OutputPath)" References="@(ReferencePath)" ShouldGenerateSerializer="true" UseProxyTypes="false" KeyContainer="$(KeyContainerName)" KeyFile="$(KeyOriginatorFile)" DelaySign="$(DelaySign)" ToolPath="$(SGenToolPath)">
+			<Output TaskParameter="SerializationAssembly" ItemName="SerializationAssembly" />
+		</SGen>
+	</Target>
+	<Target Name="GetMyPackageFiles">
+		<ItemGroup>
+			<BuildOutputInPackage Include="$(TargetDir)$(ProjectName).XmlSerializers.dll" />
+		</ItemGroup>
+	</Target>-->
+</Project>

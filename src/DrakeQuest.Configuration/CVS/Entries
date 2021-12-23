@@ -1,0 +1,21 @@
+D/Design////
+D/Properties////
+/.cvsignore/1.1/Tue Sep 24 09:25:56 2019/-kb/
+/ApplicationElement.cs/1.1/Mon Oct 26 09:01:02 2020/-kb/
+/ApplicationElementCollection.cs/1.1/Mon Oct 26 09:07:56 2020/-kb/
+/ApplicationSettingElement.cs/1.1/Mon Oct 26 09:01:02 2020/-kb/
+/ApplicationSettingElementCollection.cs/1.1/Mon Oct 26 08:45:01 2020/-kb/
+/CDataConfigurationElement.cs/1.1/Mon Oct 26 08:45:16 2020/-kb/
+/CDataConfigurationPropertyAttribute.cs/1.1/Wed Sep  8 08:17:15 2010/-kb/
+/ConnectionStringElement.cs/1.1/Mon Oct 26 09:01:02 2020/-kb/
+/ConnectionStringElementCollection.cs/1.1/Mon Oct 26 08:54:18 2020/-kb/
+/EnvironmentElement.cs/1.1/Mon Oct 26 09:01:02 2020/-kb/
+/EnvironmentElementCollection.cs/1.1/Mon Oct 26 09:00:10 2020/-kb/
+/EnvironmentManager.cs/1.1/Wed Sep 25 08:17:59 2019/-kb/
+/EnvironmentsSection.cs/1.1/Mon Oct 26 09:22:19 2020/-kb/
+/EnvironmentsSectionRepository.cs/1.1/Mon Oct 26 10:00:11 2020/-kb/
+/SettingElement.cs/1.1/Mon Oct 26 09:01:02 2020/-kb/
+/SettingElementCollection.cs/1.1/Tue May 17 12:51:26 2011/-kb/
+/UrlElement.cs/1.1/Mon Oct 26 09:01:02 2020/-kb/
+/UrlElementCollection.cs/1.1/Wed Sep  8 08:17:17 2010/-kb/
+/NBL.Configuration.csproj/1.3/Fri Nov 13 12:34:29 2020/-kb/

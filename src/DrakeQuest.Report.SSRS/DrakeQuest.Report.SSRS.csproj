@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFrameworks>net452;net472;net48</TargetFrameworks>
+	</PropertyGroup>
+	<ItemGroup Condition="'$(TargetFramework.StartsWith(`net4`))'">
+		<Reference Include="System.Web" />
+		<Reference Include="System.Web.Services" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\DrakeQuest.Report\DrakeQuest.Report.csproj" />
+		<ProjectReference Include="..\DrakeQuest.BCL\DrakeQuest.BCL.csproj" />
+	</ItemGroup>
+</Project>

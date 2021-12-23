@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DrakeQuest.Configuration.ConnectionStringElement" Collapsed="true">
+    <Position X="7.25" Y="4.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAEAAAAAAQAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>ConnectionStringElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrakeQuest.Configuration.ConnectionStringElementCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.75" Y="2.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAACAAAAAAgCAAAAAAAABAEIAAAAERAAAAACAA=</HashCode>
+      <FileName>ConnectionStringElementCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DrakeQuest.Configuration.EnvironmentElement">
+    <Position X="11" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAEAEAAAAAAQAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>EnvironmentElement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ConnectionStrings" />
+      <Property Name="Settings" />
+      <Property Name="Urls" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DrakeQuest.Configuration.EnvironmentElementCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="20.25" Y="2.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAACAAAAAAgCAAAAAAAABAEIAAAAERAAAAACAA=</HashCode>
+      <FileName>EnvironmentElementCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DrakeQuest.Configuration.EnvironmentManager">
+    <Position X="7.75" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACBAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>EnvironmentManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="AppSettings" />
+      <Property Name="ConnectionStrings" />
+      <Property Name="Environments" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DrakeQuest.Configuration.SettingElement" Collapsed="true">
+    <Position X="11" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>SettingElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrakeQuest.Configuration.SettingElementCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAACAAAAAAgCAAAAAAAABAEIAAAAERAAAAACAA=</HashCode>
+      <FileName>SettingElementCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DrakeQuest.Configuration.UrlElement" Collapsed="true">
+    <Position X="14" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>UrlElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrakeQuest.Configuration.UrlElementCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.25" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAACAAAAAAgCAAAAAAAABAEIAAAAERAAAAACAA=</HashCode>
+      <FileName>UrlElementCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="System.Collections.Generic.List&lt;T&gt;" Collapsed="true">
+    <Position X="16" Y="2" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.String" Collapsed="true">
+    <Position X="5.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Configuration.ConnectionStringSettings" Collapsed="true">
+    <Position X="7.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

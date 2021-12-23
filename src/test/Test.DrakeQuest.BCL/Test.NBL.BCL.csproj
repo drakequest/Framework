@@ -1,0 +1,5 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>DrakeQuest.BCL.Test</RootNamespace>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <!-- The configuration and platform will be used to determine which assemblies to include from solution and project documentation sources -->
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3766e829-ef51-4ec4-9a62-797c934a83d8}</ProjectGuid>
+    <SHFBROOT Condition=" '$(SHFBROOT)' == '' ">C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\</SHFBROOT>
+    <SHFBSchemaVersion>2017.9.26.0</SHFBSchemaVersion>
+    <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual Studio adds them anyway -->
+    <AssemblyName>Documentation</AssemblyName>
+    <RootNamespace>Documentation</RootNamespace>
+    <Name>Documentation</Name>
+    <!-- SHFB properties -->
+    <FrameworkVersion>.NET Framework 4.7.2</FrameworkVersion>
+    <OutputPath>$(MSBuildThisFileDirectory)..\..\Doc\src\</OutputPath>
+    <HtmlHelpName>Documentation</HtmlHelpName>
+    <Language>en-US</Language>
+    <HelpFileFormat>Website</HelpFileFormat>
+    <SyntaxFilters>C#, Visual Basic, Managed C++</SyntaxFilters>
+    <PresentationStyle>VS2013</PresentationStyle>
+    <CleanIntermediates>True</CleanIntermediates>
+    <KeepLogFile>True</KeepLogFile>
+    <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
+    <IndentHtml>True</IndentHtml>
+    <BuildAssemblerVerbosity>AllMessages</BuildAssemblerVerbosity>
+    <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
+    <DocumentationSources>
+      <DocumentationSource sourceFile="D:\CVS\ITDev\library\dotnet\DrakeQuest\src\build\Debug\net472\DrakeQuest.BCL\DrakeQuest.BCL.xml" />
+      <DocumentationSource sourceFile="D:\CVS\ITDev\library\dotnet\DrakeQuest\src\build\Debug\net472\DrakeQuest.BCL\DrakeQuest.BCL.dll" />
+      <DocumentationSource sourceFile="D:\CVS\ITDev\library\dotnet\DrakeQuest\src\build\Debug\net472\DrakeQuest.Data\DrakeQuest.Data.dll" />
+    </DocumentationSources>
+    <HtmlSdkLinkType>Msdn</HtmlSdkLinkType>
+    <BinaryTOC>True</BinaryTOC>
+    <IncludeFavorites>True</IncludeFavorites>
+    <WebsiteSdkLinkType>None</WebsiteSdkLinkType>
+    <AppendMarkdownFileExtensionsToUrls>True</AppendMarkdownFileExtensionsToUrls>
+    <VisibleItems>Attributes, ExplicitInterfaceImplementations, InheritedMembers, InheritedFrameworkMembers, InheritedFrameworkInternalMembers, InheritedFrameworkPrivateMembers, Internals, Privates, PrivateFields, Protected, SealedProtected, ProtectedInternalAsProtected, NoPIATypes, PublicCompilerGenerated, EditorBrowsableNever, NonBrowsable</VisibleItems>
+    <MissingTags>Summary, Parameter, Returns, Value, Remarks, AutoDocumentCtors, Namespace, TypeParameter, IncludeTargets, AutoDocumentDispose</MissingTags>
+    <ProjectSummary>DrakeQuest Solution will regroup all the project required in the group</ProjectSummary>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Diagram\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Diagram\DrakeQuest_Assemblies_Views.png">
+      <ImageId>DrakeQuest_Assemblies_Views</ImageId>
+      <AlternateText>DrakeQuest Assemblies Views</AlternateText>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Image>
+  </ItemGroup>
+  <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
+			 the build.  The others are optional common platform types that may appear. -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Win32' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  </PropertyGroup>
+  <!-- Import the SHFB build targets -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Win32' ">
+  </PropertyGroup>
+  <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
+  <!-- The pre-build and post-build event properties must appear *after* the targets file import in order to be evaluated correctly. -->
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>(robocopy $(MSBuildThisFileDirectory)..\Diagram $(OutputPath)images\Diagram /R:0 /W:0) ^&amp; IF %ERRORLEVEL% LEQ 1 exit 0</PostBuildEvent>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <!--<Target Name="CopyDiagram" AfterTargets="CoreBuildHelp">
+		<Exec Command="robocopy $(MSBuildThisFileDirectory)..\Diagram  $(OutputPath)\images\Diagram /R:0 /W:0" />
+	</Target>-->
+</Project>

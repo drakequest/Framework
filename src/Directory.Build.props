@@ -1,0 +1,35 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<Project>
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<IsPackable>true</IsPackable>
+		<TargetFrameworks>net452;net472;net48;netcoreapp3.1;net5.0</TargetFrameworks>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\Signing\key.snk</AssemblyOriginatorKeyFile>
+		<Company>Nomura Bank (Luxembourg) S.A.</Company>
+		<Copyright>Copyright © Nomura Bank (Luxembourg) S.A. 2020</Copyright>
+		<Authors>IT Dev</Authors>
+		<RepositoryType>CVS</RepositoryType>
+		<RepositoryUrl>ITDev/library/dotnet/DrakeQuest/$(MSBuildProjectName)</RepositoryUrl>
+	</PropertyGroup>
+	<Choose>
+		<When Condition="Exists($(SolutionDir))">
+			<PropertyGroup>
+				<OutDir>$(MSBuildThisFileDirectory)build\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName)\</OutDir>
+				<OutputPath>$(MSBuildThisFileDirectory)build\$(Configuration)</OutputPath>
+				<DocumentationFile>$(MSBuildThisFileDirectory)build\$(Configuration)\$(MSBuildProjectName).xml</DocumentationFile>
+			</PropertyGroup>
+		</When>
+	</Choose>
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+		<DefineConstants>TRACE</DefineConstants>
+	</PropertyGroup>
+	<ItemGroup>
+		<Folder Include="Properties\" />
+		<None Include="..\Signing\key.snk" Link="Properties\key.snk" />
+	</ItemGroup>
+	<!--<Target Name="SaveUsedPackages" AfterTargets="Build">
+		<Exec Command="powershell -command &quot;Get-ChildItem '$(MSBuildThisFileDirectory)packages' -Recurse  -ErrorAction SilentlyContinue | Where-Object { ($_.PSIsContainer -eq $False) -and ($_.Name -like '*.nupkg') } | ForEach-Object {Copy-Item -Path $_.Fullname -Destination '$(MSBuildThisFileDirectory)local_packages' -Force -ErrorAction Ignore}&quot;" />
+	</Target>-->
+</Project>

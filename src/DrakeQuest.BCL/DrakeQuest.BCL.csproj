@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<!-- project configuration-->
+		<RootNamespace>DrakeQuest</RootNamespace>
+	</PropertyGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\DrakeQuest.Configuration\DrakeQuest.Configuration.csproj" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net452'">
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="1.1.2" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="1.1.2" />
+		<PackageReference Include="Autofac" Version="4.9.2" />
+		<PackageReference Include="Autofac.Configuration" Version="4.1.0" />
+	</ItemGroup>
+
+	<!--<ItemGroup Condition="'$(TargetFramework)' == 'net472' or '$(TargetFramework)' == 'net48'">
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="2.2.0" />
+		<PackageReference Include="Autofac" Version="5.1.0" />
+		<PackageReference Include="Autofac.Configuration" Version="5.1.0" />
+	</ItemGroup>-->
+
+	<!-- Net Framework-->
+	<ItemGroup Condition="'$(TargetFramework)' != 'net452'">
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="5.0.0" />
+		<PackageReference Include="Autofac" Version="6.0.0" />
+		<PackageReference Include="Autofac.Configuration" Version="6.0.0" />
+	</ItemGroup>
+
+	<!-- Net Framework-->
+	<ItemGroup Condition="'$(TargetFramework.StartsWith(`net4`))'">
+	  <Reference Include="System.Configuration" />
+	</ItemGroup>
+
+	<!-- Net Core-->
+	<ItemGroup Condition="'!$(TargetFramework.StartsWith(`net4`))'">
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="5.0.0" />
+		<PackageReference Include="Autofac" Version="6.0.0" />
+		<PackageReference Include="Autofac.Configuration" Version="6.0.0" />
+	</ItemGroup>
+</Project>

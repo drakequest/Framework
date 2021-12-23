@@ -1,0 +1,15 @@
+/.cvsignore///1571818809/
+/DbDataReader.cs///1571818809/
+/EntityDataReader.Attribute.cs///1571818809/
+/EntityDataReaderOptions.cs///1571818809/
+/FlatFileDelimitedObjectDataReader.cs///1571818809/
+/ObjectDataReader.cs///1571818809/
+/OrderAttribute.cs///1571818809/
+D/Mapper////
+D/Properties////
+/DatabaseProviderEnum.cs///1604306359/
+/EntityDataReader.cs///1604306359/
+/EntityDataReaderExtensions.cs///1604306359/
+/DatabaseModule.cs///1605188267/
+/DbDataProvider.cs///1605188267/
+/NBL.Data.csproj///1605276561/

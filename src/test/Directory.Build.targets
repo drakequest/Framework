@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<Project>
+	<PropertyGroup>
+		<SourceRevisionId>1600</SourceRevisionId>
+		<buildVersionId>$([System.DateTime]::UtcNow.ToString("dd"))</buildVersionId>
+		<VersionMajor>$([System.DateTime]::UtcNow.ToString("yyyy"))</VersionMajor>
+		<VersionMinor>$([System.DateTime]::UtcNow.ToString("MM"))</VersionMinor>
+		<AssemblyVersion>$(VersionMajor).$(VersionMinor).$(buildVersionId).$(SourceRevisionId)</AssemblyVersion>
+		<Version>$(VersionMajor).$(VersionMinor).$(buildVersionId)</Version>
+		<DrakeQuestSolutionDir>$(MSBuildThisFileDirectory)</DrakeQuestSolutionDir>
+	</PropertyGroup>
+	<Choose>
+		<When Condition="Exists($(SolutionDir))">
+			<PropertyGroup>
+				<OutDir>$(MSBuildThisFileDirectory)..\build\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName)\</OutDir>
+				<OutputPath>$(MSBuildThisFileDirectory)..\build\$(Configuration)</OutputPath>
+				<DocumentationFile>$(MSBuildThisFileDirectory)..\build\$(Configuration)\$(MSBuildProjectName).xml</DocumentationFile>
+			</PropertyGroup>
+		</When>
+	</Choose>
+	<ItemGroup>
+		<Compile Remove="**\CVS\**" />
+		<EmbeddedResource Remove="**\CVS\**" />
+		<None Remove="**\CVS\**" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove=".cvsignore" />
+	</ItemGroup>
+</Project>
